@@ -1,6 +1,7 @@
 GWSMultiStateView
 =================
 
+The dumpState does not work for 1.0.0.0 release, will be fixed in next release.
 
 Usage
 =====
