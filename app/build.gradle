@@ -95,12 +95,16 @@ android {
             debuggable true
             minifyEnabled false
             testCoverageEnabled true
+            applicationIdSuffix '.dev'
+            versionNameSuffix '-dev'
 
         }
 
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationIdSuffix '.release'
+            versionNameSuffix '-release'
         }
     }
 }
