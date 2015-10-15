@@ -11,7 +11,7 @@ def libVersionName = "1.0.0.1"
 version = libVersionName
 def siteUrl = 'https://github.com/shareme/GWSMultiStateView'
 def gitUrl = 'https://github.com/shareme/GWSMultiStateView.git'
-group = "com.github.shareme.GWSMultiStateView"
+group = "com.github.shareme"
 
 
 android {
