@@ -1,7 +1,8 @@
 GWSMultiStateView
 =================
 
-The dumpState does not work for 1.0.0.0 release, will be fixed in next release.
+The dumpState uses Timber logs
+
 
 Usage
 =====
@@ -20,7 +21,7 @@ Than in the module buildscript:
 
 
 ```groovy
-compile 'com.github.shareme:GWSMultiStateView:1.0.0.0@aar'
+compile 'com.github.shareme:GWSMultiStateView:{latest-release-number}@aar'
 ```
 
 

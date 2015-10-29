@@ -35,6 +35,8 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
+import timber.log.Timber;
+
 
 /**
  * A view designed to wrap a single child (the "content") and hide/show that content based on the current "state" (see {@link ContentState}) of this
@@ -259,12 +261,11 @@ public class MultiStateView extends FrameLayout {
 
     /** Dump the current state of the view. Requires {@link BuildConfig#DEBUG}. */
     public void dumpState() {
-        //TODO: fix this as this is always false for the library BuildConfig.DEBUG
-        if (!BuildConfig.DEBUG) return;
 
-        Log.v(TAG, "/-- Start Dump State ---");
-        Log.v(TAG, "| Current state = " + mViewState.state);
-        Log.v(TAG, "| Children: " + getChildCount());
+
+        Timber.v(TAG, "/-- Start Dump State ---");
+        Timber.v(TAG, "| Current state = " + mViewState.state);
+        Timber.v(TAG, "| Children: " + getChildCount());
 
         for (int i = 0; i < getChildCount(); i++) {
             View child = getChildAt(i);
@@ -280,11 +281,11 @@ public class MultiStateView extends FrameLayout {
                 state = ContentState.LOADING;
             }
 
-            Log.v(TAG, String.format(Locale.US, "| - #%d: %s (%s) -> %s",
+            Timber.v(TAG, String.format(Locale.US, "| - #%d: %s (%s) -> %s",
                     i, child, state, (child != null && child.getVisibility() == View.VISIBLE ? "visible" : "gone")));
         }
 
-        Log.v(TAG, "\\-- End Dump State ---");
+        Timber.v(TAG, "\\-- End Dump State ---");
     }
 
     /**
